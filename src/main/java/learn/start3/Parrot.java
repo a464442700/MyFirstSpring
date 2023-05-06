@@ -1,10 +1,6 @@
-package com;
+package learn.start3;
 
-import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-
-//@Component
 public class Parrot {
     private String name;
 
