@@ -15,8 +15,11 @@ public class Parrot {
     public String getName() {
         return name;
     }
-    @PostConstruct
-    public void init() {
-        this.name = "Kiki";
+
+    @Override
+    public String toString() {
+        return "Parrot{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }
