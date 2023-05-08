@@ -2,6 +2,7 @@ package abs.services;
 
 import abs.model.Comment;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import abs.proxies.CommentNotificationProxy;
 import abs.repos.CommentRepository;
@@ -19,8 +20,11 @@ public class CommentService {
 //    }
    @Autowired
    private  CommentRepository commentRepository;
+
    @Autowired
+   @Qualifier("CommentPushNotificationProxy")
    private  CommentNotificationProxy commentNotificationProxy;
+
     public void publishComment(Comment comment) {
         commentRepository.storeComment(comment);
         commentNotificationProxy.sendComment(comment);
