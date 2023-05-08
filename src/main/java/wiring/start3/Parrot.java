@@ -2,7 +2,7 @@ package wiring.start3;
 
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Parrot {
     private String name;
 

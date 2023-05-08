@@ -4,16 +4,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Person {
     private String name;
-
-
-    private final Parrot parrot;
-
-    public Person(@Qualifier("parrot2") Parrot parrot) {
-        this.parrot = parrot;
-    }
+    //-----------------------------//
+    @Qualifier("parrot2")
+    @Autowired
+    private Parrot parrot;
+    //-----------------------------//
+//-----------------------------//
+//不使用@Autowired，注入多个Bean中的一个
+//    private final Parrot parrot;
+//    public Person(@Qualifier("parrot2") Parrot parrot) {
+//        this.parrot = parrot;
+//    }
+//-----------------------------//
     public String getName() {
         return name;
     }
@@ -25,7 +30,6 @@ public class Person {
     public Parrot getParrot() {
         return parrot;
     }
-
 
 
 }
