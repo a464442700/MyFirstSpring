@@ -1,0 +1,39 @@
+src
+└── main
+    ├── java
+    │   ├── com
+    │   │   ├── yourcompany
+    │   │   │   ├── config               // Spring 配置类
+    │   │   │   │   ├── AppConfig.java
+    │   │   │   │   └── WebConfig.java
+    │   │   │   ├── controller           // 控制器
+    │   │   │   │   ├── HomeController.java
+    │   │   │   │   └── ...
+    │   │   │   ├── model                // 实体类或数据传输对象
+    │   │   │   │   ├── User.java
+    │   │   │   │   ├── ProductDTO.java
+    │   │   │   │   └── ...
+    │   │   │   ├── repository           // 数据库访问层，与数据存储相关
+    │   │   │   │   ├── UserRepository.java
+    │   │   │   │   ├── ...
+    │   │   │   ├── service              // 服务层，业务逻辑
+    │   │   │   │   ├── UserService.java
+    │   │   │   │   ├── ...
+    │   │   │   ├── exception            // 异常处理
+    │   │   │   │   ├── ResourceNotFoundException.java
+    │   │   │   │   └── ...
+    │   │   │   ├── interceptor          // 拦截器，实现请求拦截的类
+    │   │   │   │   ├── LoggerInterceptor.java
+    │   │   │   │   └── ...
+    │   │   │   ├── task                 // 定时任务
+    │   │   │   │   ├── EmailTask.java
+    │   │   │   │   └── ...
+    │   │   │   └── Application.java     // 应用程序入口
+    │   │   └── ...
+    │   └── ...
+    └── resources
+        ├── static                        // 静态资源文件存放目录，如 CSS、JavaScript、图片等
+        │   ├── css
+        │   ├── js
+        │   ├── images
+        │
