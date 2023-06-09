@@ -18,8 +18,9 @@ public class LawyerServiceProxyHandler implements InvocationHandler {
     //method:被代理对象 如客户
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("律师出庭");
-        Object result = method.invoke(target, args);//讲述客户诉求
+        System.out.println("律师代替出庭");
+        Object result = method.invoke(target, args);//
+        System.out.println("律师讲述客户需求："+result);
         System.out.println("律师代替追讨经济损失");
         return result;
     }

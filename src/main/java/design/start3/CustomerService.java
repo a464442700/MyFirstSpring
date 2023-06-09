@@ -1,4 +1,4 @@
-package design.start1;
+package design.start3;
 
 public interface CustomerService {
    public String goal();//客户的目的就是要维权
